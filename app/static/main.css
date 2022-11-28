@@ -25,6 +25,8 @@
 .boton:hover{
     background-color: #038bfa;
     color:#000;
+    border-radius: 15px;
+    cursor: pointer;
 }
 
 /* Botones de regreso */

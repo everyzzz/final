@@ -26,7 +26,7 @@ def menu():
 @rick_morty.route("/eliminar")
 def delete():
     db.drop_collection("names")
-    return render_template("menu.html")
+    return render_template("index.html")
 
 
 @rick_morty.route("/insert")

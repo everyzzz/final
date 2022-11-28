@@ -1,40 +1,25 @@
 {% block content %}
+<!DOCTYPE html>
+<html lang="en">     
 <head>
-    <title>Rick And Morty</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú</title>
     <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
     <link rel="shortcut icon" href="/static/images/logo.jpg" />  
 </head>
-<button class="boton"> <a class="boton" href="{{url_for('rick_morty.menu')}}">
-    Regresar al menú
-</button>    </a>
-<center><h1 id="title">Lista de Personajes</h1></center>
-<body class="body">
-    <div class="container">
-        {% for i in ri_mo %}
-        <div class="table">
-            <div class="separator">
-                <a id="name_index" href="{{ url_for('rick_morty.informacion', id=i.id) }}">
-                <img class="img" src="{{ i.img_url }}" id="img_main" />
-                <div id="definitive">
-                    <div id="name_index">
-                        {{ i.name  }}</a>
-                    </div> <hr>
-                    <div id="subnames_index">
-                        {% if i.status == "Alive" %}
-                            <li id="l1"><span id="names_index_live">{{ i.status }} - {{i.species}}</span></li>
-                        {% elif i.status == "Dead" %}
-                            <li id="l2"><span id="names_index_dead">{{ i.status }} - {{i.species}}</span></li>
-                        {% else %}
-                            <li id="l3"><span id="names_index_unknown">{{ i.status }} - {{i.species}}</span></li>
-                        {% endif %}
-                        <br>   
-                        <span id="subtitles">Last known location:</span> <br> {{ i.location }} <br> 
-                        <span id="subtitles">First Seen in:</span> <br> {{ i.episode }}
-                    </div>
-                </div>
-            </div>
-        </div>        
-        {% endfor %}
+<body class="menu">
+    <div id="photo">
+        <img src="/static/images/foto.jpg" alt="">
     </div>
+    <ul class="section">
+        <!-- <li class="li" aria-disabled="true"><a href="{{url_for('rick_morty.index')}}" class="options"> Ver personajes </a></li> -->
+        <li class="li" ><a href="{{url_for('rick_morty.menu')}}" class="options"> Ver personajes </a></li>
+        <li class="li"><a href="{{url_for('rick_morty.insert')}}" class="options"> Insertar Datos </a></li>
+        <li class="li"><a href="{{url_for('rick_morty.delete')}}" class="options"> Eliminar Datos </a></li>
+        <li class="li"><a href="{{url_for('rick_morty.partido')}}" class="options"> Partido </a></li>
+    </ul>
 </body>
-{% endblock content %}
+</html>
+{% endblock %}
