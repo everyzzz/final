@@ -1,0 +1,16 @@
+PASOS PARA CREAR UNA APP CON FLASK USANDO FLASKFORMS, PYMONGO, ETC:
+
+1. Crear carpeta para la creación de la app, dentro de la carpeta crear un nuevo entorno y activar el entorno.
+2. Crear dentro del directorio principal un archivo requirements.txt para las librerías seguido de instalar con pip install -r requirements.txt
+3. Crear un nuevo archivo .env en el directorio general donde se configurarán datos o variables de entorno como FLASK_DEBUG, FLASK_APP, etc IMPORTANTE es crear siempre una SECRET_KEY. 
+4. Crear un archivo .py (ejemplo 'main.py') que será el directorio principal desde donde ejecutaremos nuestra app
+5. Crear una carpeta llamada 'app' dentro del directorio principal que contendra las siguientes carpetas (models,routes,templates,static) Estas carpetas varian dependiendo la necesidad y la estructura que querramos darle a nuestra app. Seguido de esto crearemos dentro de la carpeta 'app' un archivo con el nombre __init__.py, esto para indicarle python que app es un paquete ya que este lo busca por __init__.py
+6. Dentro de '__init__.py' importaremos las librerias que usemos para nuestra app, seguido crearemos una función (ejem: def create_app()) dentro de la función instanciaremos flask dentro de una variable llamada app que recibira a Flask (app=Flask(__name__) con esto le indicamos donde se encuentra la aplicación).
+7. Creamos dentro de la carpeta 'app' un archivo config.py dentro del archivo importaremos os y crearemos una clase llamada Config, dentro de la clase Config crearemos una variable SECRET_KEY que recibira nuestra variable de entorno SECRET_KEY. 
+8. Dentro de la carpeta 'app' en __init__.py importaremos la clase Config, seguido diremos dentro de la función 'create_app()' que la instancia app creada anteriormente será de la siguiente forma 'app.config.from_object(Config)'
+9. Crearemos dentro de la carpeta app un nuevo archivo .py donde estarán nuestros formulario (ejem: forms.py) dentro de este mismo importaremos flask_forms, wtforms, y wtf.validators. A su vez, crearemos una clase por cada formulario(En este caso solo crearemos una llamada BookForms) a las que le pasaremos como paremetro la libreria FlaskForm, para que herede todas sus funciones.
+10. Crearemos una nueva ruta dentro de la carpeta routes con el nombre de nuestro formulario (ejem: book.py) dentro importaremos render_template(para las rutas),url_for(para buscar rutas), flash(para flashear mensajes), Blueprint(para distribuir nuestras rutas), a su vez importaremos la clase creada anteriormente para nuestro formulario (BookForm)
+11. Dentro de nuestra <ruta>.py instanciaremos Blueprint para indicarle que será nuestra ruta (ejem: book_router=Blueprint('book_router',__name__) Blueprint recibe dos parámetros el primero es el nombre de la ruta, y el segundo la instancia, o el mismo archivo) 
+12. Dentro de nuestra <ruta>.py crearemos nuestras nuevas rutas (esto depende de lo que necesitemos, sea listar, agregar, etc) para esto lo podemos hacer de la siguiente forma (ejem: @book_router.route("/") seguido de nuestras funciones que retornaran un template)
+
+CONTINUAR... VIDEO 48:00

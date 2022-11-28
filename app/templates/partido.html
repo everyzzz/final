@@ -1,0 +1,48 @@
+{% block content %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundial 2022</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <!-- Shaka Player ui compiled library: -->
+    <script src="https://cdn.jsdelivr.net/npm/shaka-player@4.3.0/dist/shaka-player.ui.js"></script>
+    <!-- Shaka Player ui compiled library default CSS: -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/shaka-player@4.3.0/dist/controls.css">
+    <!-- Chromecast SDK (if you want Chromecast support for your app): -->
+    <script defer src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js"></script>
+    <link rel="shortcut icon" href="/static/images/logo.jpg" />  
+    <link rel="stylesheet" href="css/style.css">
+    <head>
+        <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+    </head>
+        
+</head>
+<body class="body">
+    <button class="boton"> <a class="boton" href="{{url_for('rick_morty.menu')}}">
+        Regresar
+    </button>    </a>  
+    
+      
+    <div style=" padding: 2%;background-color:#3c3e44;position: absolute; top:50%;left: 50%; transform: translate(-50%,-50%); border-radius: 15px;">
+        <main id="app">
+            <div id="channel"></div>
+            <div id="message-channel"></div>
+            <div data-shaka-player-container style="max-width: 100%" data-shaka-player-cast-receiver-id="1BA79154" class="full-media">
+                <video autoplay data-shaka-player id="video" style="width:100%;height:100%"></video>
+            </div>
+            <div id="controls">
+             <center>   <button id="prev-channel">Ant. Canal</button>
+                <button id="next-channel">Sig. Canal</button></center>
+            </div>
+        </main>
+        </div>
+        
+        <script src="{{url_for('static', filename='js/app.js')}}" type="module"></script>
+</body>
+</html>
+{% endblock content %}
