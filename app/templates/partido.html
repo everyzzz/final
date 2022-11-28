@@ -17,17 +17,13 @@
     <script defer src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js"></script>
     <link rel="shortcut icon" href="/static/images/logo.jpg" />  
     <link rel="stylesheet" href="css/style.css">
-    <head>
-        <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
-    </head>
-        
+    <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">       
 </head>
+
 <body class="body">
-    <button class="boton"> <a class="boton" href="{{url_for('rick_morty.menu')}}">
-        Regresar
-    </button>    </a>  
-    
-      
+    <a class="boton" href="{{url_for('rick_morty.menu')}}">
+        <button class="boton"> Regresar </button>
+    </a>   
     <div style=" padding: 2%;background-color:#3c3e44;position: absolute; top:50%;left: 50%; transform: translate(-50%,-50%); border-radius: 15px;">
         <main id="app">
             <div id="channel"></div>
@@ -36,13 +32,14 @@
                 <video autoplay data-shaka-player id="video" style="width:100%;height:100%"></video>
             </div>
             <div id="controls">
-             <center>   <button id="prev-channel">Ant. Canal</button>
-                <button id="next-channel">Sig. Canal</button></center>
+                <center>
+                    <button id="prev-channel">Ant. Canal</button>
+                    <button id="next-channel">Sig. Canal</button>
+                </center>
             </div>
         </main>
-        </div>
-        
-        <script src="{{url_for('static', filename='js/app.js')}}" type="module"></script>
+    </div> 
+    <script src="{{url_for('static', filename='js/app.js')}}" type="module"></script>
 </body>
 </html>
 {% endblock content %}
