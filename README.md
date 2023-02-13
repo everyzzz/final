@@ -7,7 +7,7 @@ git clone https://github.com/joseqr23/Api-Rick-and-Morty-Python-MongoDB.git
 ```
 ### 2- Access to folder
 ```
-cd Api-Rick-and-Morty-Python-MongoDB
+cd RickAndMortyApi-Python-Flask-MongoDB
 ```
 ### 3- Install virtual environment
 ```
