@@ -20,7 +20,7 @@ def episode(url):
 
 @rick_morty.route("/menu")
 def menu():
-    ri_mo= db.names.find().sort("id",pymongo.DESCENDING)
+    ri_mo= db.names.find() # To unorder list .sort("id",pymongo.DESCENDING)
     return render_template("menu.html",ri_mo = ri_mo) 
 
 @rick_morty.route("/eliminar")
@@ -56,7 +56,3 @@ def insert():
 def informacion(id):
     user= db.names.find_one({'id':id})
     return render_template("perfiles.html", user=user)
-
-@rick_morty.route("/partido")
-def partido():
-    return render_template("partido.html")

@@ -1,20 +1,22 @@
 /*Perfil*/
-.profile{
+.profile {
     padding: 2%;
-    background-color:#3c3e44;
+    background-color: #3c3e44;
     position: absolute;
-    top:50%;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%); 
+    transform: translate(-50%, -50%);
     border-radius: 15px;
 }
-.titulos{
+
+.titulos {
     font-size: 25px;
     color: bisque;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
 }
-.subtitulos{
+
+.subtitulos {
     font-size: 20px;
     color: rgb(207, 146, 12);
     font-family: 'Times New Roman';
@@ -22,107 +24,119 @@
 
 
 /* Sombreado de Botones */
-.boton:hover{
+.boton:hover {
     background-color: #038bfa;
-    color:#000;
+    color: #000;
     border-radius: 15px;
     cursor: pointer;
 }
 
 /* Botones de regreso */
-.boton{
+.boton {
     width: auto;
     height: auto;
     border-radius: 15px;
     background-color: rgba(255, 230, 0, 0.87);
-    border:none;
+    border: none;
     font-size: 20px;
     font-family: Impact;
     color: rgb(33, 19, 95);
     text-decoration: none;
 }
+
 /* Lista de personajes - Index */
-.body{
+.body {
     background-color: #202329;
 }
-.container{
+
+.container {
     padding-left: 80px;
 
 }
-.table{
-    display: inline-block ;   
-    margin:15px;
+
+.table {
+    display: inline-block;
+    margin: 15px;
     width: 520px;
     height: auto;
-    background-color:#3c3e44;
+    background-color: #3c3e44;
     border-radius: 20px;
     /* border: solid 1px; */
 }
-.separator{
+
+.separator {
     display: flex;
     line-height: 25px;
-    margin:auto;
+    margin: auto;
 }
 
-#definitive{
+#definitive {
     display: inline;
-    padding:15px;
-    margin:auto;
+    padding: 15px;
+    margin: auto;
 }
 
 
 /* Datos Personaje */
-#img_main{
+#img_main {
     width: 250px;
     border-radius: 20px;
 }
-#img_main:hover{
+
+#img_main:hover {
     opacity: .5;
 }
 
-#title{
-    color:  rgb(214, 218, 9);
+#title {
+    color: rgb(214, 218, 9);
     font-size: 70px;
     -webkit-text-stroke: 2px rgb(255, 208, 0);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-#name_index{
-    font-size: 30px; 
-    color:rgb(255, 255, 255);
+
+#name_index {
+    font-size: 30px;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
-#name_index:hover{
-    color:#fffb00;
+
+#name_index:hover {
+    color: #fffb00;
 }
 
 
-#names_index_live{
-    font-size: 15px;
-    color: white;
-    font-family: 'Franklin Gothic Medium'; 
-}
-#names_index_dead{
-    font-size: 15px;
-    color: white;
-    font-family: 'Franklin Gothic Medium';
-}   
-#names_index_unknown{
+#names_index_live {
     font-size: 15px;
     color: white;
     font-family: 'Franklin Gothic Medium';
 }
-#l1{
+
+#names_index_dead {
+    font-size: 15px;
+    color: white;
+    font-family: 'Franklin Gothic Medium';
+}
+
+#names_index_unknown {
+    font-size: 15px;
+    color: white;
+    font-family: 'Franklin Gothic Medium';
+}
+
+#l1 {
     color: rgb(22, 206, 6);
     height: 10px;
     font-size: 20px;
 }
-#l2{
+
+#l2 {
     color: rgba(255, 0, 0, 0.925);
     height: 10px;
     font-size: 20px;
 }
-#l3{
+
+#l3 {
     color: rgba(255, 187, 0, 0.925);
     height: 10px;
     font-size: 20px;
@@ -131,60 +145,65 @@
 
 
 
-#subtitles{
+#subtitles {
     font-size: 14px;
     color: rgb(189, 188, 188);
-    font-family:'Lucida Sans' ;
+    font-family: 'Lucida Sans';
 }
-#subnames_index{
+
+#subnames_index {
     font-size: 17px;
     color: rgb(255, 255, 255);
-    font-family: Verdana, Geneva, Tahoma, sans-serif ;
-} 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
 
 /* Foto del menú */
-#photo{
+#photo {
     float: inline-start;
     margin-top: 70px;
     text-align: center;
 }
-#photo img{
+
+#photo img {
     border: solid 2px white;
     border-radius: 25px;
 }
 
 /* Botones de Menú */
-.section{
-    display:flex;
+.section {
+    display: flex;
     margin-top: 20px;
 }
-.li{
+
+.li {
     list-style: none;
-    margin:auto;
+    margin: auto;
 }
-.options{
+
+.options {
     display: block;
-    padding:8px;
+    padding: 8px;
     text-align: center;
     text-decoration: none;
     font-size: 40px;
     font-family: Impact;
     color: rgb(255, 255, 255);
-    -webkit-text-stroke:1px rgb(3, 82, 82);
+    -webkit-text-stroke: 1px rgb(3, 82, 82);
     background-color: #2d2973;
     border-radius: 10px;
     border: solid 1px white;
 }
+
 /* Sombreado de Botones */
-.section .li .options:hover{
+.section .li .options:hover {
     background-color: #2586d7;
-    margin-top:-2px;
-    padding-bottom:12px;
+    margin-top: -2px;
+    padding-bottom: 12px;
 }
 
 /* Imagen del Menú */
-.menu{
+.menu {
     background-image: url('./images/fondo.png');
     background-size: cover;
 }
